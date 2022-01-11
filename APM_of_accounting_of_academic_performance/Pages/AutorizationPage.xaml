@@ -1,0 +1,35 @@
+﻿<Page x:Class="APM_of_accounting_of_academic_performance.Pages.AutorizationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:APM_of_accounting_of_academic_performance.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AutorizationPage">
+
+
+    <Grid Background="White">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Margin="25">
+            <TextBlock HorizontalAlignment="Center" Style="{StaticResource BigTextBlock}">Войти в приложение</TextBlock>
+        </StackPanel>
+           <StackPanel Margin="5">
+                <TextBlock HorizontalAlignment="Center" Style="{StaticResource DeffTextBlock}">Логин</TextBlock>
+        </StackPanel>
+            <StackPanel Margin="5" >
+                <TextBox HorizontalAlignment="Center" x:Name="LoginLoginBox" Style="{StaticResource BigTextBox}" > Admin1</TextBox>
+            </StackPanel>
+            <StackPanel Margin="5" >
+                <TextBlock HorizontalAlignment="Center" Style="{StaticResource DeffTextBlock}" >Пароль</TextBlock>
+                </StackPanel>
+            <StackPanel Margin="5" >
+                <PasswordBox  x:Name="LoginPassBox" Style="{StaticResource BigPassBox}" Password="Admin1"></PasswordBox>
+        </StackPanel>
+            <StackPanel Margin="30" >
+                <Button x:Name="AuthButton" Style="{StaticResource BigButton}" Click="AuthButton_Click"> Войти </Button>
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Page>

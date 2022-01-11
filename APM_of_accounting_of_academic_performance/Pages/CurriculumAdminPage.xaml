@@ -1,0 +1,60 @@
+﻿<Page x:Class="APM_of_accounting_of_academic_performance.Pages.CurriculumAdminPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:APM_of_accounting_of_academic_performance.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="1000"
+      Title="CurriculumAdminPage">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel x:Name="LetterrsStackPanel"  Orientation="Horizontal"  >
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="0">
+            <TextBlock Style="{StaticResource VerySmallTextBlock}" Margin="15,0,15,0" >Вывести планы за:</TextBlock>
+            <Button Style="{StaticResource SmallInventButton}" Click="AllTimesButton_Click" >все планы</Button>
+            <TextBlock Style="{StaticResource VerySmallTextBlock}" Margin="20,0,5,0" >20</TextBlock>
+            <TextBox Style="{StaticResource VeryVerySmallTextBox}" x:Name="YearsTextBox" TextChanged="YearsTextBox_TextChanged" PreviewTextInput="YearsTextBox_PreviewTextInput" ></TextBox>
+            <TextBlock Style="{StaticResource VerySmallTextBlock}" Margin="5,0,20,0">год</TextBlock>
+            <TextBlock Style="{StaticResource VerySmallTextBlock}" >Специальность</TextBlock>
+            <ComboBox VerticalAlignment="Center" Width="350" Margin="5" x:Name="SpecialtysCombobox" SelectionChanged="SpecialtysCombobox_SelectionChanged"></ComboBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Right">
+            <Button  Width="260" Style="{StaticResource SmallInventButton}" Margin="0,0,20,0" Click="AddCurrentAdminsButton_Click" >Добавить новый учебный план</Button>
+        </StackPanel>
+        <DataGrid TextBlock.TextAlignment="Center" x:Name="CurrentAdminsDataGrid" Grid.Row="2"  ColumnWidth="*" IsReadOnly="True" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Специальность" Binding="{Binding Specialtys.specialty_name}" Width="150"></DataGridTextColumn>
+                <DataGridTextColumn Header="Предмет" Binding="{Binding Sudjects.sudject_name}" ></DataGridTextColumn>
+                <DataGridTextColumn Header="Код плана" Binding="{Binding code}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Часов всего" Binding="{Binding all_hours}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Часов теории" Binding="{Binding sudject_hours_theory}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Часов практики" Binding="{Binding sudject_hours_practice}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Часов курсового" Binding="{Binding sudject_hours_course_design}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Номер семестра" Binding="{Binding semester_numbers}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Год обучения" Binding="{Binding year_of_study}"></DataGridTextColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Редактировать" Click="ChangeCurrentButton_Click"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Удалить" Click="DropCurrentButton_Click"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Page>

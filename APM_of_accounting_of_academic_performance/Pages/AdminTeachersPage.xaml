@@ -1,0 +1,47 @@
+﻿<Page x:Class="APM_of_accounting_of_academic_performance.Pages.AdminTeachersPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:APM_of_accounting_of_academic_performance.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="1000"
+      Title="AdminTeachersPage">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel x:Name="LetterrsStackPanel"  Orientation="Horizontal"  >
+        </StackPanel>
+        
+        <StackPanel Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Right">
+            <Button  Width="250" Style="{StaticResource SmallInventButton}" Margin="0,0,20,0" Click="AddTeasherButton_Click" >Добавить нового преподавателя</Button>
+        </StackPanel>
+        <DataGrid TextBlock.TextAlignment="Center" x:Name="UsersDataGrid" Grid.Row="1"  ColumnWidth="*"  IsReadOnly="True" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding teacher_fname}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Имя" Binding="{Binding teacher_name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Отчество" Binding="{Binding teacher_patronomic}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Логин" Binding="{Binding Users.user_login}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Пароль" Binding="{Binding Users.user_password}"></DataGridTextColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Подробнее" Click="TeashersButton_Click" ></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Удалить" Click="TeashersDeliteButton_Click"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Page>

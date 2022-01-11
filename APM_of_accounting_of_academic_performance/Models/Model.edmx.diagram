@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b67315a3b3934717a3d8dff480a002bb" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.Attachment" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Curriculum_in_the_specialtys" Width="1.5" PointX="6" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Groups" Width="1.5" PointX="6" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Loads" Width="1.5" PointX="8.5" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Roles" Width="1.5" PointX="1.5" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Specialtys" Width="1.5" PointX="3.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Sudjects" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Teachers" Width="1.5" PointX="11" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Type_of_clocks" Width="1.5" PointX="6" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Users" Width="1.5" PointX="1.5" PointY="8" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK_Attachment_Sudjects" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Attachment_Teachers" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Curriculum_in_the_specialtys_Specialtys" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Curriculum_in_the_specialtys_Sudjects" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Loads_Curriculum_in_the_specialtys" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Loads_Groups" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Loads_Teachers" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Loads_Type_of_clocks" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Users_Roles" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Teachers_Users" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

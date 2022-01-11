@@ -1,0 +1,88 @@
+﻿<Page x:Class="APM_of_accounting_of_academic_performance.Pages.AdminTeasherPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:APM_of_accounting_of_academic_performance.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="1000"
+      Title="AdminTeasherPage">
+
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" Margin="20 10 0 0">
+            <StackPanel Orientation="Horizontal" Margin="0 10,20,10">
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20">Фамилия:</TextBlock>
+                <TextBlock x:Name="TeasherFamilyTextBox" Height="30" Width="250" Margin="15,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"> Анатольев</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0 10,20,10">
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Margin="0 0 40 0">Имя:</TextBlock>
+                <TextBlock x:Name="TeasherNameTextBox" Height="30" Width="250" Margin="15,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"> Анатолий</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0 10,20,10">
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20">Отчество:</TextBlock>
+                <TextBlock x:Name="TeasherPatronomicTextBox" Height="30" Width="250" Margin="15,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"> Анатольевич</TextBlock>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="0 10,20,10">
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20">Логин:</TextBlock>
+                <TextBlock x:Name="TeasherLoginTextBox" Height="30" Width="250" Margin="25,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20">Анатольевич</TextBlock>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="0 10,20,10">
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20">Пароль:</TextBlock>
+                <TextBlock x:Name="TeasherPasswordTextBox" Height="30" Width="250" Margin="15,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20">Анатольевич</TextBlock>
+            </StackPanel>
+
+
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                <TextBlock Style="{StaticResource VerySmallTextBlock}"  Margin="5">Новый предмет:</TextBlock>
+                <ComboBox Width="120"  Margin="5" x:Name="SubjectComboBox" ></ComboBox>
+                <Button Style="{StaticResource SmallInventButton}" Content="Добавить"  Margin="5" Click="AddSubjectButton_Click"></Button>
+            </StackPanel>
+            <StackPanel  Margin="15,10,15,0">
+                <StackPanel>
+                    <DataGrid TextBlock.TextAlignment="Center" x:Name="TeasherSubjectGrid" ColumnWidth="*" IsReadOnly="True" AutoGenerateColumns="False" >
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Назначенные предметы" Binding="{Binding Sudjects.sudject_name}"></DataGridTextColumn>
+                            <DataGridTemplateColumn>
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Content="Удалить" Click="DeliteButton_Click"></Button>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </StackPanel>
+               
+            </StackPanel>
+         
+
+        </StackPanel>
+        <StackPanel Grid.Column="1" Margin="0 20 0 0" >
+
+            <TextBlock VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="20" Margin="0 0 0 0">Фотография</TextBlock>
+            <DockPanel Margin="0 10 0 10">
+                <Image x:Name="PhotoImage" Source="/Resources/po-photo.jpg" VerticalAlignment="Top" HorizontalAlignment="Center"  Width="240" Height="260"/>
+            </DockPanel>
+            <DockPanel>
+                <TextBlock Style="{StaticResource VerySmallTextBlock}" HorizontalAlignment="Center">Часовая нагрузка</TextBlock>
+            </DockPanel>
+            <DockPanel HorizontalAlignment="Center" >
+                <TextBlock Style="{StaticResource VerySmallTextBlock}"  >Всего за год:</TextBlock>
+                <TextBlock Style="{StaticResource VerySmallTextBlock}" x:Name="AllHoursTextBlock" >23</TextBlock>
+                <TextBlock Style="{StaticResource VerySmallTextBlock}" >Бюджетных:</TextBlock>
+                <TextBlock Style="{StaticResource VerySmallTextBlock}"  x:Name="BudjHoursTextBlock">2</TextBlock>
+                <TextBlock Style="{StaticResource VerySmallTextBlock}" >Внебюджетных:</TextBlock>
+                <TextBlock Style="{StaticResource VerySmallTextBlock}"  x:Name="DonHoursTextBlock" >21</TextBlock>
+            </DockPanel>
+            <StackPanel>
+                <Button Style="{StaticResource SmallButton}" Grid.Column="1"  VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0 10 0 0" Click="AdminMoreUserLoudButton" >Подробнее</Button>
+            </StackPanel>
+            
+        </StackPanel>
+        <Button Style="{StaticResource SmallButton}" Grid.Column="1"  VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0 0 20 20" Click="AdminUserChengeButton" >Изменить</Button>
+    </Grid>
+</Page>

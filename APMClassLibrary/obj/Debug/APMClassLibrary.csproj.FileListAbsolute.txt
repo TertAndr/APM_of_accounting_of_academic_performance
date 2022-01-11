@@ -1,0 +1,6 @@
+C:\Users\1\Desktop\APM_of_accounting_of_academic_performance\APMClassLibrary\bin\Debug\APMClassLibrary.dll
+C:\Users\1\Desktop\APM_of_accounting_of_academic_performance\APMClassLibrary\bin\Debug\APMClassLibrary.pdb
+C:\Users\1\Desktop\APM_of_accounting_of_academic_performance\APMClassLibrary\obj\Debug\APMClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\1\Desktop\APM_of_accounting_of_academic_performance\APMClassLibrary\obj\Debug\APMClassLibrary.dll
+C:\Users\1\Desktop\APM_of_accounting_of_academic_performance\APMClassLibrary\obj\Debug\APMClassLibrary.pdb
+C:\Users\1\Desktop\APM_of_accounting_of_academic_performance\APMClassLibrary\obj\Debug\APMClassLibrary.csprojAssemblyReference.cache

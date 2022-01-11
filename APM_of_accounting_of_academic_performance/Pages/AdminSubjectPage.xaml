@@ -1,0 +1,50 @@
+﻿<Page x:Class="APM_of_accounting_of_academic_performance.Pages.AdminSubjectPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:APM_of_accounting_of_academic_performance.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="1000"
+      Title="AdminSubjectPage">
+
+    <Grid Background="White">
+        <StackPanel>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0">
+                <TextBlock HorizontalAlignment="Center" Style="{StaticResource BigTextBlock}">Список предметов</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Style="{StaticResource DeffTextBlock}" Margin="0,0,30,0" >Добавить новый предмет:</TextBlock>
+                <TextBox Style="{StaticResource DefTextBox}" Width="400" x:Name="AddSubjectTextBlock" ></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Style="{StaticResource DeffTextBlock}">Код предмета:</TextBlock>
+                <TextBox Style="{StaticResource DefTextBox}" Width="280" x:Name="AddSubjectCodeTextBlock" ></TextBox>
+                <Button Content="Добавить" Style="{StaticResource DefButton}" Margin="5"  Click="AddSubjectButton_Click" ></Button>
+            </StackPanel>
+            <StackPanel>
+                <DataGrid TextBlock.TextAlignment="Center" x:Name="SudjectsDataGrid" Grid.Row="1"  ColumnWidth="*"  Margin="50,5,50,0" FontSize="15" IsReadOnly="True" AutoGenerateColumns="False">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Предмет" Binding="{Binding sudject_name}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Предмет" Binding="{Binding sudject_code}"></DataGridTextColumn>
+                        <DataGridTemplateColumn>
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Content="Редактировать"  Click="ChangesSubjectButton_Click"  ></Button>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTemplateColumn>
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Content="Удалить" Click="DeliteSubjectButton"></Button>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Page>

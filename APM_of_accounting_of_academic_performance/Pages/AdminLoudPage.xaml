@@ -1,0 +1,54 @@
+﻿<Page x:Class="APM_of_accounting_of_academic_performance.Pages.AdminLoudPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:APM_of_accounting_of_academic_performance.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="1000"
+      Title="AdminLoudPage">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel x:Name="LetterrsStackPanel"  Orientation="Horizontal"  >
+        </StackPanel>
+        <Button  Width="240" Style="{StaticResource SmallInventButton}"  Click="AdminAddLoudButton_Click" HorizontalAlignment="Right" Margin="10">Добавить новую учебную нагрузку</Button>
+        <StackPanel Orientation="Horizontal" Grid.Row="0">
+            <TextBlock Style="{StaticResource VerySmallTextBlock}" Margin="15,0,15,0" >Вывести нагрузку за:</TextBlock>
+            <Button Style="{StaticResource SmallInventButton}" Click="AllTimesButton_Click" >все время</Button>
+            <DatePicker  VerticalAlignment="Center" Margin="15,0,0,0" x:Name="LoudsDatePicker" SelectedDateChanged="LoudsDatePicker_SelectedDateChanged"></DatePicker>
+        </StackPanel>
+
+
+        <DataGrid TextBlock.TextAlignment="Center" x:Name="LoudsAdminDataGrid" Grid.Row="1"  ColumnWidth="*" IsReadOnly="True" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Фамилия преподавателя" Binding="{Binding Teachers.TeacherFIO}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Группа" Binding="{Binding Groups.groups_name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Код плана" Binding="{Binding Curriculum_in_the_specialtys.code}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Специальность" Binding="{Binding Curriculum_in_the_specialtys.Specialtys.specialty_name}" ></DataGridTextColumn>
+                <DataGridTextColumn Header="Предмет"  Binding="{Binding Curriculum_in_the_specialtys.Sudjects.sudject_name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Дата"   Binding="{Binding date, StringFormat={}{0:dd/MM/yyyy}}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Часов" Binding="{Binding loud_hours}" ></DataGridTextColumn>
+                <DataGridTextColumn Header="Тип часов" Binding="{Binding Type_of_clocks.type_of_clock_name}" ></DataGridTextColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Редактирование" Click="ChengeLoudButton_Click" ></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Удаление" Click="DropLoudButton_Click" ></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Page>

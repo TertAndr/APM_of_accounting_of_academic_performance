@@ -1,0 +1,51 @@
+﻿<Page x:Class="APM_of_accounting_of_academic_performance.Pages.AdminSpecialtyPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:APM_of_accounting_of_academic_performance.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="1000"
+      Title="AdminSpecialtyPage">
+
+    <Grid Background="White">
+        <StackPanel>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0">
+                <TextBlock HorizontalAlignment="Center" Style="{StaticResource BigTextBlock}">Список специальностей</TextBlock>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Style="{StaticResource SmallTextBlock}"> Добавить новую специальность :</TextBlock>
+                <TextBox Style="{StaticResource DefTextBox}" Width="440" x:Name="SpecialtysNameTextBlock" ></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+                <TextBlock Style="{StaticResource SmallTextBlock}" > Код специальности :</TextBlock>
+                <TextBox Style="{StaticResource DefTextBox}" Width="240" Margin="0,0,90,0" x:Name="SpecialtysCodeTextBox"></TextBox>
+                <Button  Style="{StaticResource DefButton}" Click="AddSpecialtysButton_Click" >Добавить</Button>
+            </StackPanel>
+            <StackPanel>
+                <DataGrid TextBlock.TextAlignment="Center" x:Name="SpecialtysDataGrid" Grid.Row="1"  ColumnWidth="*"  Margin="50,0,50,0" FontSize="15" IsReadOnly="True" AutoGenerateColumns="False">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Специальность" Binding="{Binding specialty_name}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Код"  Binding="{Binding specialty_code}"></DataGridTextColumn>
+                        <DataGridTemplateColumn>
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Content="Реддактировать"  Click="ChangeSpecialtysButton"></Button>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTemplateColumn>
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Content="Удалить" Click="DeliteSpecialtysButton"></Button>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Page>

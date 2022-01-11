@@ -1,0 +1,27 @@
+﻿<Page x:Class="APM_of_accounting_of_academic_performance.Pages.AdminChangeSpecialyPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:APM_of_accounting_of_academic_performance.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AdminSpecialyChangePage">
+
+    <Grid Background="White">
+
+        <StackPanel>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,30,0,20">
+                <TextBlock HorizontalAlignment="Center" Style="{StaticResource BigTextBlock}">Список специальностей</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="20" >
+                <TextBlock Style="{StaticResource DeffTextBlock}">Изменить называние специальности:</TextBlock>
+            </StackPanel>
+            <TextBox Style="{StaticResource DefTextBox}" Width="510" x:Name="ChangeSpecialyTextBox"  ></TextBox>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBox Style="{StaticResource DefTextBox}" Width="270" x:Name="ChangeSpecialyCodeTextBox" Margin="10" ></TextBox>
+                <Button  Style="{StaticResource DefButton}" Click="SpecialyChangeButton_Click" >Изменить</Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

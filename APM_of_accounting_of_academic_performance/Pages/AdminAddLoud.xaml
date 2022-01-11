@@ -1,0 +1,45 @@
+﻿<Page x:Class="APM_of_accounting_of_academic_performance.Pages.AdminAddLoud"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:APM_of_accounting_of_academic_performance.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="1000"
+      Title="AdminAddLoud">
+
+    <Grid Background="White">
+        <StackPanel Margin="10" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel HorizontalAlignment="Center">
+                <TextBlock Style="{StaticResource SmallTextBlock}">Добавление нагрузки</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="20" >
+                <TextBlock Style="{StaticResource DeffTextBlock}" Margin="0,0,10,0">Фамилия Имя Отчество преподавателя:</TextBlock>
+                <ComboBox x:Name="FIOCombobox" Style="{StaticResource SmallComboBox}" Width="365"></ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <TextBlock Style="{StaticResource DeffTextBlock}" Margin="15,0,25,0"> Учебный план по  специальности:</TextBlock>
+                <ComboBox x:Name="SpecialityCombobox" Style="{StaticResource SmallComboBox}" Width="400"></ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="10">
+ 
+                <TextBlock Style="{StaticResource DeffTextBlock}" Margin="0,0,115,0">Группа:</TextBlock>
+                <ComboBox x:Name="GroupsCombobox" Style="{StaticResource SmallComboBox}" SelectionChanged="GroupsCombobox_SelectionChanged"></ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="15">
+                <TextBlock Style="{StaticResource DeffTextBlock}" Margin="10,0,115,0">Дата:</TextBlock>
+                <DatePicker Margin="10,0,0,0" SelectedDateFormat="Long" Width="170"  x:Name="DateLoudDatePicker"  >  </DatePicker>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <TextBlock Style="{StaticResource DeffTextBlock}" Margin="15,0,95,0">Часов :</TextBlock>
+                <TextBox x:Name="HoursTextBox" Style="{StaticResource DefTextBox}" PreviewTextInput="HoursTextBox_PreviewTextInput"></TextBox>
+                <TextBlock Style="{StaticResource DeffTextBlock}" Margin="15,0,10,0">Тип часов:</TextBlock>
+                <ComboBox x:Name="ClocksTypeCombobox" Style="{StaticResource SmallComboBox}"></ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="20">
+
+                <Button x:Name="SubjectAddCombobox" Content="Добавить" Style="{StaticResource DefButton}"  Click="LoudsAddCombobox_Click" ></Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

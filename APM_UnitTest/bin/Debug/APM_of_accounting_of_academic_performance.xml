@@ -1,0 +1,729 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>APM_of_accounting_of_academic_performance</name>
+    </assembly>
+    <members>
+        <member name="T:APM_of_accounting_of_academic_performance.App">
+            <summary>
+            Логика взаимодействия для App.xaml
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Controllers.AttachmentController.GetAttachment">
+            <summary>
+            Получение данных о  всех назначенных предметах
+            </summary>
+            <returns>
+            Возвращает лист с данными о всех назначенных предметах
+            </returns>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Controllers.AttachmentController.GetAttachmentUser(System.Int32)">
+            <summary>
+            Получение данных о конкретных назначенных предметах
+            </summary>
+            <param name="Id_Profile"> id конкретного пользователя</param>
+            <returns>
+            Возвращает лист с данными о конкретных назначенных предметах
+            </returns>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Controllers.AttachmentController.AddNewSubject(System.Int32,System.Int32)">
+            <summary>
+            Добавление нового назначенного предмета
+            </summary>
+            <param name="teasherId"> id конкретного пользователя</param>
+            <param name="sudjectId"> id добавляемого предмета</param>
+            <returns>
+            true - если добавление прошло успешно
+            Exception("Произошла ошибка при добавлении!") - если произошла ошибка
+            </returns>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Controllers.AttachmentController.DropAttachment(APM_of_accounting_of_academic_performance.Models.Attachment)">
+            <summary>
+            Удаление назначенного педмета
+            </summary>
+            <param name="item">Строка информации о предметах</param>
+            <returns>
+            true - если удаление прошло успешно
+            Exception("Произошла ошибка при удалении!") - если произошла ошибка
+            </returns>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Controllers.Curriculum_in_the_specialtysController.GetCurriculum_in_the_specialtys">
+            <summary>
+            Получение данных всех планов специальностей из БД
+            </summary>
+            <returns>
+            Возвращает массив с планами специальностей
+            </returns>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Controllers.Curriculum_in_the_specialtysController.GetCurriculum_in_the_specialtysYears(System.Int32)">
+            <summary>
+            Получение данных о определенных планах специальностей 
+            </summary>
+            <param name="selectedYears">Выбранный год </param>
+            <returns>
+            Возвращает лист с данными о определенных планах специальностей 
+            </returns>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Controllers.Curriculum_in_the_specialtysController.GetCurriculum_in_the_specialtysSpecialtys(System.Int32)">
+            <summary>
+            Получение данных о определенных планах специальностей 
+            </summary>
+            <param name="selectedSpecial">Выбранная специальность </param>
+            <returns>
+            Возвращает лист с данными о определенных планах специальностей 
+            </returns>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Controllers.Curriculum_in_the_specialtysController.AddNewCurriculums(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+            Добавление новой специальности
+            </summary>
+            <param name="specialtysId"> id специальности</param>
+            <param name="sudjectsId">id предмета</param>
+            <param name="currentAllhours"> Всего выделенно часов</param>
+            <param name="currentSudjectHoursTheory">Выделенно часов на теорию</param>
+             <param name="currentSudjectHoursPractice">Выделенно часов на практику</param>
+             <param name="currentSudjectHourscourseDesign">Выделенно часов на курсовой проект</param>
+             <param name="currentSemesterNumbers">Номер семестра</param>
+             <param name="currentYearOfStudy">Год обучения</param>
+             <param name="currentCode">Код учебного плана</param>
+            <returns>
+            true - если добавление прошло успешно
+            Exception("Произошла ошибка при добавлении!") - если произошла ошибка
+            </returns>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Controllers.Curriculum_in_the_specialtysController.UpdateCurriculums(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.String,APM_of_accounting_of_academic_performance.Models.Curriculum_in_the_specialtys)">
+            <summary>
+            Обновление специальности
+            </summary>
+            <param name="specialtysId"> id специальности</param>
+            <param name="sudjectsId">id предмета</param>
+            <param name="currentAllhours"> Всего выделенно часов</param>
+            <param name="currentSudjectHoursTheory">Выделенно часов на теорию</param>
+             <param name="currentSudjectHoursPractice">Выделенно часов на практику</param>
+             <param name="currentSudjectHourscourseDesign">Выделенно часов на курсовой проект</param>
+             <param name="currentSemesterNumbers">Номер семестра</param>
+             <param name="currentYearOfStudy">Год обучения</param>
+             <param name="currentCode">Код учебного плана</param>
+             <param name="curriculum">Старые данные учебного плана</param>
+            <returns>
+            true - если обновление прошло успешно
+            Exception("Произошла ошибка при обновлении!") - если произошла ошибка
+            </returns>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Controllers.GroupsController.GetGroups">
+            <summary>
+            Получение данных всех групп из БД
+            </summary>
+            <returns> 
+            Возвращает массив с данными групп        
+             </returns>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Controllers.GroupsController.AddNewGroups(System.String)">
+            <summary>
+            Добавление новой группы
+            </summary>
+            <param name="groupName">Называние группы</param>
+            <returns>
+            true - если добавление прошло успешно
+            Exception("Произошла ошибка при добавлении!") - если произошла ошибка
+            </returns>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Controllers.GroupsController.UpdateGroups(System.String,APM_of_accounting_of_academic_performance.Models.Groups)">
+            <summary>
+            Обновление информации о группе
+            </summary>
+            <param name="groupName">Называние группы</param>
+            <param name="groupp">Старая информация о группе</param>
+            <returns>
+            true - если добавление прошло успешно
+            Exception("Произошла ошибка при обновлении!") - если произошла ошибка
+            </returns>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Controllers.LoadsController.GetLoads">
+            <summary>
+            Получение данных о нагрузках
+            </summary>
+            <returns>
+            Возвращает лист с данными о нагрузках
+            </returns>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Controllers.LoadsController.GetLoadsUser(System.Int32)">
+            <summary>
+            Получение данных о нагрузках
+            </summary>
+            <param name="Id_Profile"> id конкретного пользователя</param>
+            <returns>
+            Возвращает лист с данными о нагрузках
+            </returns>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Controllers.LoadsController.GetLoadsDate(System.DateTime)">
+            <summary>
+            Получение данных о нагрузках
+            </summary>
+            <param name="selectedDate"> Дата</param>
+            <returns>
+            Возвращает лист с данными о нагрузках
+            </returns>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Controllers.LoadsController.GetLoadsDateUser(System.DateTime,System.Int32)">
+            <summary>
+            Получение данных о нагрузках
+            </summary>
+            <param name="Id_Profile"> id конкретного пользователя</param>
+            <param name="selectedDate"> Дата</param>
+            <returns>
+            Возвращает лист с данными о нагрузках
+            </returns>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Controllers.LoadsController.AddNewLouds(System.Int32,System.Int32,System.Int32,System.DateTime,System.Int32,System.Int32)">
+            <summary>
+            Добавление новой нагрузки
+            </summary>
+            <param name="teasherId"> id преподавателя</param>
+            <param name="groupId"> id группы</param>
+            <param name="specialityId">id специальности</param>
+            <param name="dateLoud"> Дата</param>
+            <param name="hours">Кол-во часов</param>
+            <param name="clockType">Тип часов</param>
+            <returns>
+            true - если добавление прошло успешно
+            Exception("Произошла ошибка при добавлении новой нагрузки") - если произошла ошибка
+            </returns>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Controllers.LoadsController.UpdateLouds(System.Int32,System.Int32,System.Int32,System.DateTime,System.Int32,System.Int32,APM_of_accounting_of_academic_performance.Models.Loads)">
+            <summary>
+            Обновление нагрузки
+            </summary>
+            <param name="teasherId"> id преподавателя</param>
+            <param name="groupId"> id группы</param>
+            <param name="specialityId">id специальности</param>
+            <param name="dateLoud"> Дата</param>
+            <param name="hours">Кол-во часов</param>
+            <param name="clockType">Тип часов</param>
+            <param name="loaads">Старые данные нагрузки</param>
+            <returns>
+            true - если добавление прошло успешно
+            Exception("Произошла ошибка при обновлении нагрузки") - если произошла ошибка
+            </returns>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Controllers.RolesController.GetRoles">
+            <summary>
+            Получение данных о ролях
+            </summary>
+            <returns>
+            Возвращает лист с данными о ролях
+            </returns>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Controllers.SpecialtysController.GetSpecialtys">
+            <summary>
+            Получение данных всех специальностей из БД
+            </summary>
+            <returns>
+            Возвращает массив с данными специальностей         
+             </returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:APM_of_accounting_of_academic_performance.Controllers.SpecialtysController.AddNewSpecialtys(System.String,System.String)" -->
+        <!-- Badly formed XML comment ignored for member "M:APM_of_accounting_of_academic_performance.Controllers.SpecialtysController.UpdateSpecialtys(System.String,System.String,APM_of_accounting_of_academic_performance.Models.Specialtys)" -->
+        <member name="M:APM_of_accounting_of_academic_performance.Controllers.SudjectsController.GetSudjects">
+            <summary>
+            Получение данных всех предметов из БД
+            </summary>
+            <returns>
+            Возвращает массив с данными предметов         
+             </returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:APM_of_accounting_of_academic_performance.Controllers.SudjectsController.AddNewSubjects(System.String,System.String)" -->
+        <!-- Badly formed XML comment ignored for member "M:APM_of_accounting_of_academic_performance.Controllers.SudjectsController.UpdateSubjects(System.String,System.String,APM_of_accounting_of_academic_performance.Models.Sudjects)" -->
+        <member name="M:APM_of_accounting_of_academic_performance.Controllers.TeachersController.GetTeachers">
+            <summary>
+            Получение данных о преподавателях
+            </summary>
+            <returns>
+            Возвращает лист с данными о преподавателях
+            </returns>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Controllers.TeachersController.GetTeachersIdProfile(System.Int32)">
+            <summary>
+            Получение данных о конкретных назначенных преподавателях
+            </summary>
+            <param name="Id_Profile"> id конкретного пользователя</param>
+            <returns>
+            Возвращает лист с данными о конкретных назначенных преподавателях
+            </returns>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Controllers.TeachersController.AddNewTeasher(System.String,System.String,System.String,System.Byte[],System.Int32)">
+            <summary>
+            Добавление нового преподавателя
+            </summary>
+            <param name="teacherFname">Фамилия преподавателя</param>
+            <param name="teacherName">Имя преподавателя</param>
+            <param name="teacherPatronomic">Отчество преподавателя</param>
+            <param name="avatarImage">Фотография преподавателя</param>
+            <param name="idUser"> id пользователя</param>
+            <returns>
+            true - если добавление прошло успешно
+            Exception("Произошла ошибка при добавлении нового преподавателя") - если произошла ошибка
+            </returns>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Controllers.TeachersController.UpdateTeasher(System.String,System.String,System.String,System.Byte[],APM_of_accounting_of_academic_performance.Models.Teachers)">
+            <summary>
+            Обновление преподавателя
+            </summary>
+            <param name="teacherFname">Фамилия преподавателя</param>
+            <param name="teacherName">Имя преподавателя</param>
+            <param name="teacherPatronomic">Отчество преподавателя</param>
+            <param name="avatarImage">Фотография преподавателя</param>
+            <param name="teacheer"> Старые данные преподавателя</param>
+            <returns>
+            true - если добавление прошло успешно
+            Exception("Произошла ошибка при обновлении преподавателя") - если произошла ошибка
+            </returns>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Controllers.Type_of_clocksController.GetType_of_clocks">
+            <summary>
+            Получение данных о типе часов
+            </summary>
+            <returns>
+            Возвращает лист с данными о типе часов
+            </returns>
+        </member>
+        <member name="F:APM_of_accounting_of_academic_performance.Controllers.ProfileClass.Id_Profile">
+            <value>
+            Id_Profile - id авторизованного пользователя
+            </value>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Controllers.UsersController.GetUsers">
+            <summary>
+            Получение данных всех пользователей из БД
+            </summary>
+            <returns>
+            Возвращает массив с данными пользователей
+            </returns>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Controllers.UsersController.UserAuth(System.String,System.String)">
+            <summary>
+            Авторизация пользователя в приложении
+            </summary>
+            <param name="userLogin"> Входная строка содержащая логин пользователя </param>
+            <param name="userPassword"> Входная строка содержащая пароль пользователя </param>
+            <returns>
+            Возвращает роль авторизуемого пользователя
+            </returns>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Controllers.UsersController.AddNewUser(System.String,System.String,System.Int32)">
+            <summary>
+            Добавление нового пользователя
+            </summary>
+            <param name="userLogin">Логин пользователя</param>
+            <param name="userPassword">Пароль пользователя</param>
+            <param name="userRole">Роль пользователя</param>
+            <returns>
+            true - если добавление прошло успешно
+            Exception("Произошла ошибка при добавлении нового пользователя") - если произошла ошибка
+            </returns>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Controllers.UsersController.UpdateUser(System.String,System.String,System.Int32,APM_of_accounting_of_academic_performance.Models.Teachers)">
+            <summary>
+            Добавление нового пользователя
+            </summary>
+            <param name="userLogin">Логин пользователя</param>
+            <param name="userPassword">Пароль пользователя</param>
+            <param name="userRole">Роль пользователя</param>
+            <param name="teacheer">Старая информация о пользователе</param>
+            <returns>
+            true - если добавление прошло успешно
+            Exception("Произошла ошибка при обновлении пользователя") - если произошла ошибка
+            </returns>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Controllers.UsersController.UpdateAutorizUser(System.String,System.String,APM_of_accounting_of_academic_performance.Models.Teachers)">
+            <summary>
+            Добавление нового пользователя
+            </summary>
+            <param name="userLogin">Логин пользователя</param>
+            <param name="userPassword">Пароль пользователя</param>
+            <param name="teacheer">Старая информация о пользователе</param>
+            <returns>
+            true - если добавление прошло успешно
+            Exception("Произошла ошибка при обновлении пользователя") - если произошла ошибка
+            </returns>
+        </member>
+        <member name="T:APM_of_accounting_of_academic_performance.MainWindow">
+            <summary>
+            Логика взаимодействия для MainWindow.xaml
+            </summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:APM_of_accounting_of_academic_performance.Pages.AbminTeashersLoudPage">
+            <summary>
+            Логика взаимодействия для AbminTeashersLoudPage.xaml
+            </summary>
+            <summary>
+            AbminTeashersLoudPage
+            </summary>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Pages.AbminTeashersLoudPage.#ctor(APM_of_accounting_of_academic_performance.Models.Teachers)">
+            <summary>
+            Инициализация данных на странице AbminTeashersLoudPage
+            </summary>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Pages.AbminTeashersLoudPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:APM_of_accounting_of_academic_performance.Pages.AdminAddLoud">
+            <summary>
+            Логика взаимодействия для AdminAddLoud.xaml
+            </summary>
+            <summary>
+            AdminAddLoud
+            </summary>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Pages.AdminAddLoud.AddNewLouds">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Pages.AdminAddLoud.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:APM_of_accounting_of_academic_performance.Pages.AdminAddTeasherPage">
+            <summary>
+            Логика взаимодействия для AdminAddTeasherPage.xaml
+            </summary>
+            <summary>
+            AdminAddTeasherPage
+            </summary>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Pages.AdminAddTeasherPage.AddNewTeasher">
+            <summary>
+            Осуществление добавления нового пользователя
+            </summary>
+            <returns>
+            Возвращает:
+            true - если все данные были введены корректно
+            false - если произошла ошибка или данные введены некорректно  
+            </returns>
+            
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Pages.AdminAddTeasherPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:APM_of_accounting_of_academic_performance.Pages.AdminChangeLoudPage">
+            <summary>
+            Логика взаимодействия для AdminChangeLoudPage.xaml
+            </summary>
+            <summary>
+            AdminChangeLoudPage
+            </summary>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Pages.AdminChangeLoudPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:APM_of_accounting_of_academic_performance.Pages.AdminChangeSubjectPage">
+            <summary>
+            Логика взаимодействия для AdminChangeSubjectPage.xaml
+            </summary>
+            <summary>
+            AdminChangeSubjectPage
+            </summary>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Pages.AdminChangeSubjectPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:APM_of_accounting_of_academic_performance.Pages.AdminChangeTeasherPage">
+            <summary>
+            Логика взаимодействия для AdminChangeTeasherPage.xaml
+            </summary>
+            <summary>
+            AdminChangeTeasherPage
+            </summary>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Pages.AdminChangeTeasherPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:APM_of_accounting_of_academic_performance.Pages.AdminChengeGroup">
+            <summary>
+            Логика взаимодействия для AdminChengeGroup.xaml
+            </summary>
+            <summary>
+            AdminChengeGroup
+            </summary>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Pages.AdminChengeGroup.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:APM_of_accounting_of_academic_performance.Pages.AdminGroupPage">
+            <summary>
+            Логика взаимодействия для AdminGroupPage.xaml
+            </summary>
+            <summary>
+            AdminGroupPage
+            </summary>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Pages.AdminGroupPage.AddNewGroups">
+            <summary>
+            Осуществление добавления нового пользователя
+            </summary>
+            <returns>
+            Возвращает:
+            true - если все данные были введены корректно
+            false - если произошла ошибка или данные введены некорректно  
+            </returns>
+            
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Pages.AdminGroupPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:APM_of_accounting_of_academic_performance.Pages.AdminLoudPage">
+            <summary>
+            Логика взаимодействия для AdminLoudPage.xaml
+            </summary>
+            <summary>
+            AdminLoudPage
+            </summary>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Pages.AdminLoudPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:APM_of_accounting_of_academic_performance.Pages.AdminMainPage">
+            <summary>
+            Логика взаимодействия для AdminMainPage.xaml
+            </summary>
+            <summary>
+            AdminMainPage
+            </summary>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Pages.AdminMainPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:APM_of_accounting_of_academic_performance.Pages.AdminSpecialtyPage">
+            <summary>
+            Логика взаимодействия для AdminSpecialtyPage.xaml
+            </summary>
+            <summary>
+            AdminSpecialtyPage
+            </summary>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Pages.AdminSpecialtyPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:APM_of_accounting_of_academic_performance.Pages.AdminChangeSpecialyPage">
+            <summary>
+            Логика взаимодействия для AdminSpecialyChangePage.xaml
+            </summary>
+            <summary>
+            AdminChangeSpecialyPage
+            </summary>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Pages.AdminChangeSpecialyPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:APM_of_accounting_of_academic_performance.Pages.AdminSubjectPage">
+            <summary>
+            Логика взаимодействия для AdminSubjectPage.xaml
+            </summary>
+            <summary>
+            AdminSubjectPage
+            </summary>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Pages.AdminSubjectPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:APM_of_accounting_of_academic_performance.Pages.AdminTeachersPage">
+            <summary>
+            AdminTeachersPage
+            </summary>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Pages.AdminTeachersPage.TeashersButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Нажатие на кнопку изменения  
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Pages.AdminTeachersPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:APM_of_accounting_of_academic_performance.Pages.AdminTeasherPage">
+            <summary>
+            Логика взаимодействия для AdminTeasherPage.xaml
+            </summary>
+            <summary>
+            AdminTeasherPage
+            </summary>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Pages.AdminTeasherPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:APM_of_accounting_of_academic_performance.Pages.AutorizationPage">
+            <summary>
+            Логика взаимодействия для AutorizationPage.xaml
+            </summary>
+            <summary>
+            AutorizationPage
+            </summary>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Pages.AutorizationPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:APM_of_accounting_of_academic_performance.Pages.CurriculumAddAdminPage">
+            <summary>
+            Логика взаимодействия для CurriculumAddAdminPage.xaml
+            </summary>
+            <summary>
+            CurriculumAddAdminPage
+            </summary>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Pages.CurriculumAddAdminPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:APM_of_accounting_of_academic_performance.Pages.CurriculumAdminPage">
+            <summary>
+            Логика взаимодействия для CurriculumAdminPage.xaml
+            </summary>
+            <summary>
+            CurriculumAdminPage
+            </summary>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Pages.CurriculumAdminPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:APM_of_accounting_of_academic_performance.Pages.CurriculumСhangeAdminPage">
+            <summary>
+            Логика взаимодействия для CurriculumСhangeAdminPage.xaml
+            </summary>
+            <summary>
+            CurriculumСhangeAdminPage
+            </summary>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Pages.CurriculumСhangeAdminPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:APM_of_accounting_of_academic_performance.Pages.UserChengeTeasherPage">
+            <summary>
+            Логика взаимодействия для UserChengeTeasherPage.xaml
+            </summary>
+            <summary>
+            UserChengeTeasherPage
+            </summary>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Pages.UserChengeTeasherPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:APM_of_accounting_of_academic_performance.Pages.UserCurriculumPage">
+            <summary>
+            Логика взаимодействия для UserCurriculumPage.xaml
+            </summary>
+            <summary>
+            UserCurriculumPage
+            </summary>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Pages.UserCurriculumPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:APM_of_accounting_of_academic_performance.Pages.UsersLoudPage">
+            <summary>
+            Логика взаимодействия для UsersLoudPage.xaml
+            </summary>
+            <summary>
+            UsersLoudPage
+            </summary>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Pages.UsersLoudPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:APM_of_accounting_of_academic_performance.Pages.UsersTeasherPage">
+            <summary>
+            Логика взаимодействия для UsersTeasherPage.xaml
+            </summary>
+            <summary>
+            UsersTeasherPage
+            </summary>
+        </member>
+        <member name="M:APM_of_accounting_of_academic_performance.Pages.UsersTeasherPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:APM_of_accounting_of_academic_performance.Properties.Resources">
+            <summary>
+              Класс ресурсов со строгим типом для поиска локализованных строк и пр.
+            </summary>
+        </member>
+        <member name="P:APM_of_accounting_of_academic_performance.Properties.Resources.ResourceManager">
+            <summary>
+              Возврат кэшированного экземпляра ResourceManager, используемого этим классом.
+            </summary>
+        </member>
+        <member name="P:APM_of_accounting_of_academic_performance.Properties.Resources.Culture">
+            <summary>
+              Переопределяет свойство CurrentUICulture текущего потока для всех
+              подстановки ресурсов с помощью этого класса ресурсов со строгим типом.
+            </summary>
+        </member>
+    </members>
+</doc>

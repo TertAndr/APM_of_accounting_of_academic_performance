@@ -1,0 +1,195 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:APM_of_accounting_of_academic_performance">
+
+    <Style x:Key="BigPassBox" TargetType="PasswordBox">
+        <Setter Property="Width" Value="350"></Setter>
+        <Setter Property="Height" Value="30"></Setter>
+        <Setter Property="FontFamily" Value="Century Gothic"></Setter>
+        <Setter Property="FontSize" Value="17"></Setter>
+        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+
+    </Style>
+
+    <Style x:Key="BigComboBox" TargetType="ComboBox">
+        <Setter Property="Width" Value="350"></Setter>
+        <Setter Property="Height" Value="30"></Setter>
+        <Setter Property="FontFamily" Value="Century Gothic"></Setter>
+        <Setter Property="FontSize" Value="17"></Setter>
+        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+    </Style>
+
+
+
+
+    <Style x:Key="BigTextBox" TargetType="TextBox">
+        <Setter Property="Width" Value="350"></Setter>
+        <Setter Property="Height" Value="30"></Setter>
+        <Setter Property="FontFamily" Value="Century Gothic"></Setter>
+        <Setter Property="FontSize" Value="17"></Setter>
+        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+
+    </Style>
+
+    <Style x:Key="DefTextBox" TargetType="TextBox">
+        <Setter Property="Width" Value="180"></Setter>
+        <Setter Property="Height" Value="30"></Setter>
+        <Setter Property="FontFamily" Value="Century Gothic"></Setter>
+        <Setter Property="FontSize" Value="20"></Setter>
+        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+        <Setter Property="Margin" Value="10"></Setter>
+    </Style>
+
+
+
+
+    <Style x:Key="VeryVerySmallTextBox" TargetType="TextBox">
+        <Setter Property="Width" Value="25"></Setter>
+        <Setter Property="Height" Value="20"></Setter>
+        <Setter Property="FontFamily" Value="Century Gothic"></Setter>
+        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+        <Setter Property="FontSize" Value="15"></Setter>
+
+    </Style>
+
+    <Style x:Key="SmallComboBox" TargetType="ComboBox">
+        <Setter Property="Width" Value="180"></Setter>
+        <Setter Property="Height" Value="30"></Setter>
+        <Setter Property="FontFamily" Value="Century Gothic"></Setter>
+        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+    </Style>
+
+    <Style x:Key="BigButton" TargetType="Button">
+        <Setter Property="Width" Value="350"></Setter>
+        <Setter Property="Height" Value="40"></Setter>
+        <Setter Property="FontSize" Value="22"></Setter>
+        <Setter Property="Background" Value="Green"></Setter>
+        <Setter Property="FontFamily" Value="Century Gothic"></Setter>
+        <Setter Property="Foreground" Value="White"></Setter>
+
+
+    </Style>
+    <Style x:Key="DefButton" TargetType="Button">
+        <Setter Property="Width" Value="230"></Setter>
+        <Setter Property="Height" Value="33"></Setter>
+        <Setter Property="FontSize" Value="17"></Setter>
+        <Setter Property="Background" Value="Green"></Setter>
+        <Setter Property="FontFamily" Value="Century Gothic"></Setter>
+        <Setter Property="Foreground" Value="White"></Setter>
+    </Style>
+
+    <Style x:Key="SmallButton" TargetType="Button">
+        <Setter Property="Width" Value="120"></Setter>
+        <Setter Property="Height" Value="25"></Setter>
+        <Setter Property="FontSize" Value="12"></Setter>
+        <Setter Property="Background" Value="Green"></Setter>
+        <Setter Property="FontFamily" Value="Century Gothic"></Setter>
+        <Setter Property="Foreground" Value="White"></Setter>
+        <Setter Property="Margin" Value="5"></Setter>
+    </Style>
+
+    <Style x:Key="SmallInventButton" TargetType="Button">
+        <Setter Property="Width" Value="120"></Setter>
+        <Setter Property="Height" Value="25"></Setter>
+        <Setter Property="FontSize" Value="13"></Setter>
+        <Setter Property="Background" Value="Green"></Setter>
+        <Setter Property="FontFamily" Value="Century Gothic"></Setter>
+        <Setter Property="Foreground" Value="White"></Setter>
+        <Setter Property="Margin" Value="5"></Setter>
+
+    </Style>
+
+
+
+
+
+
+
+
+
+
+    <Style x:Key="BigTextBlock" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Century Gothic"></Setter>
+        <Setter Property="FontSize" Value="30"></Setter>
+    </Style>
+    
+    
+    
+    <Style x:Key="DeffTextBlock" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Century Gothic"></Setter>
+        <Setter Property="FontSize" Value="20"></Setter>
+        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+        <Setter Property="Margin" Value="15"></Setter>
+    </Style>
+    
+    
+    
+    
+
+    <Style x:Key="SmallTextBlock" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Century Gothic"></Setter>
+        <Setter Property="FontSize" Value="20"></Setter>
+        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+        <Setter Property="Margin" Value="15"></Setter>
+    </Style>
+
+    <Style x:Key="VerySmallTextBlock" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Century Gothic"></Setter>
+        <Setter Property="FontSize" Value="13"></Setter>
+        <Setter Property="Margin" Value="7"></Setter>
+        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        <Setter Property="Margin" Value="5"></Setter>
+
+    </Style>
+
+
+
+    <Style x:Key="ButtonPlan" TargetType="Button">
+        <Setter Property="FontSize" Value="22"></Setter>
+        <Setter Property="FontFamily" Value="Century Gothic"></Setter>
+        <Setter Property="Foreground" Value="White"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+        <ControlTemplate  TargetType="{x:Type ButtonBase}">
+        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}"
+                Width="350" Height="40" BorderThickness="{TemplateBinding BorderThickness}"
+                Background="Green">
+            <ContentPresenter x:Name="contentPresenter"  ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+        </Border>
+        <ControlTemplate.Triggers>
+            <Trigger Property="Button.IsDefaulted" Value="True">
+                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" TargetName="border" Value="#FFBEE6FD"/>
+                <Setter Property="BorderBrush" TargetName="border" Value="#FF3C7FB1"/>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Background" TargetName="border" Value="#FFC4E5F6"/>
+                <Setter Property="BorderBrush" TargetName="border" Value="#FF2C628B"/>
+            </Trigger>
+            <Trigger Property="ToggleButton.IsChecked" Value="True">
+                <Setter Property="Background" TargetName="border" Value="#FFBCDDEE"/>
+                <Setter Property="BorderBrush" TargetName="border" Value="#FF245A83"/>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Background" TargetName="border" Value="#FFF4F4F4"/>
+                <Setter Property="BorderBrush" TargetName="border" Value="#FFADB2B5"/>
+                <Setter Property="Foreground" Value="#FF838383"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+</ResourceDictionary>

@@ -1,0 +1,47 @@
+﻿<Page x:Class="APM_of_accounting_of_academic_performance.Pages.AdminGroupPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:APM_of_accounting_of_academic_performance.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="1000"
+      Title="AdminGroupPage">
+
+        
+            <Grid Background="White">
+                <StackPanel>
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,20">
+                        <TextBlock HorizontalAlignment="Center" Style="{StaticResource BigTextBlock}">Список групп</TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock Style="{StaticResource DeffTextBlock}">Добавить новую группу:</TextBlock>
+                <TextBox Style="{StaticResource DefTextBox}" Width="280" x:Name="AddGroupsTextBlock"></TextBox>
+                <Button Content="Добавить" Style="{StaticResource DefButton}" Click="AddGroupsButton_Click" ></Button>
+                    </StackPanel>
+                    <StackPanel>
+                <DataGrid TextBlock.TextAlignment="Center" x:Name="GroupsDataGrid" Grid.Row="1"  ColumnWidth="*"   Margin="50,5,50,0" FontSize="15" IsReadOnly="True" AutoGenerateColumns="False" >
+                            <DataGrid.Columns>
+                        <DataGridTextColumn Header="Группа"  Binding="{Binding groups_name}"></DataGridTextColumn>
+                                <DataGridTemplateColumn>
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                    <Button Content="Реддактировать"  Click="ChangeGroupsButton_Click"></Button>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn>
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                    <Button Content="Удалить" Click="DeliteGroupsButton_Click" ></Button>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </StackPanel>
+                </StackPanel>
+
+
+    </Grid>
+</Page>

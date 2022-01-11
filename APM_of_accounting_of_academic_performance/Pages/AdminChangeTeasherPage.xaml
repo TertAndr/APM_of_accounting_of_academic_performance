@@ -1,0 +1,64 @@
+﻿<Page x:Class="APM_of_accounting_of_academic_performance.Pages.AdminChangeTeasherPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:APM_of_accounting_of_academic_performance.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AdminChangeTeasherPage">
+
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" Margin="30 10 0 0">
+            <StackPanel Orientation="Horizontal" Margin="0 40,20,20">
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20">Фамилия:</TextBlock>
+                <TextBox x:Name="TeasherFamilyTextBox" Height="30" Width="240" Margin="15,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20">Анатольев</TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0 10,20,20">
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Margin="0 0 40 0">Имя:</TextBlock>
+                <TextBox x:Name="TeasherNameTextBox" Height="30" Width="250" Margin="15,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20">Анатолий</TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0 10,20,20">
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20">Отчество:</TextBlock>
+                <TextBox x:Name="TeasherPatronomicTextBox" Height="30" Width="250" Margin="5,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20">Анатольевич</TextBox>
+            </StackPanel>
+            
+
+
+            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="0 10,20,20">
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20">Логин:</TextBlock>
+                <TextBox x:Name="TeasherLoginTextBox" Height="30" Width="250" Margin="25,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20">Анатольевич</TextBox>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="0 10,20,20">
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20">Пароль:</TextBlock>
+                <TextBox x:Name="TeasherPasswordTextBox" Height="30" Width="250" Margin="15,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20">Анатольевич</TextBox>
+            </StackPanel>
+            <StackPanel>
+                <TextBlock Style="{StaticResource DeffTextBlock}"> Выбранная роль</TextBlock>
+                <ComboBox x:Name="RoleRegistrComboBox" Style="{Binding BigComboBox}" ></ComboBox>
+            </StackPanel>
+
+
+
+        </StackPanel>
+        <StackPanel Grid.Column="1" Margin="0 20 0 0" >
+
+            <TextBlock VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="20" Margin="0 0 0 0">Фотография</TextBlock>
+            <DockPanel Margin="0 10 0 10">
+                <Image x:Name="PhotoImage" Source="/Resources/po-photo.jpg" VerticalAlignment="Top" HorizontalAlignment="Center"  Width="240" Height="260"/>
+            </DockPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="PhotoPathTextBox"
+                             IsEnabled="False" Style="{StaticResource DefTextBox}" Width="250"
+                             BorderThickness="4"></TextBox>
+                <Button x:Name="SearchPhotoButton"
+                            Style="{StaticResource SmallButton}" Click="SearchPhotoButton_Click">Обзор...</Button>
+            </StackPanel>
+        </StackPanel>
+        <Button Style="{StaticResource SmallButton}" Grid.Column="1"  VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0 0 20 20" Click="SaveButton_Click">Сохранить</Button>
+    </Grid>
+</Page>

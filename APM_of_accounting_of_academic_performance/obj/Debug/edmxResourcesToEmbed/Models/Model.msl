@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище ModelContainer" CdmEntityContainer="AUTOMATED_ACTIVEntities">
+    <EntitySetMapping Name="Attachment">
+      <EntityTypeMapping TypeName="Model.Attachment">
+        <MappingFragment StoreEntitySet="Attachment">
+          <ScalarProperty Name="id_attachment" ColumnName="id_attachment" />
+          <ScalarProperty Name="id_teacher" ColumnName="id_teacher" />
+          <ScalarProperty Name="id_sudject" ColumnName="id_sudject" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Curriculum_in_the_specialtys">
+      <EntityTypeMapping TypeName="Model.Curriculum_in_the_specialtys">
+        <MappingFragment StoreEntitySet="Curriculum_in_the_specialtys">
+          <ScalarProperty Name="id_curriculum_in_the_specialty" ColumnName="id_curriculum_in_the_specialty" />
+          <ScalarProperty Name="id_sudject" ColumnName="id_sudject" />
+          <ScalarProperty Name="id_specialty" ColumnName="id_specialty" />
+          <ScalarProperty Name="all_hours" ColumnName="all_hours" />
+          <ScalarProperty Name="sudject_hours_theory" ColumnName="sudject_hours_theory" />
+          <ScalarProperty Name="sudject_hours_practice" ColumnName="sudject_hours_practice" />
+          <ScalarProperty Name="sudject_hours_course_design" ColumnName="sudject_hours_course_design" />
+          <ScalarProperty Name="semester_numbers" ColumnName="semester_numbers" />
+          <ScalarProperty Name="year_of_study" ColumnName="year_of_study" />
+          <ScalarProperty Name="code" ColumnName="code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Groups">
+      <EntityTypeMapping TypeName="Model.Groups">
+        <MappingFragment StoreEntitySet="Groups">
+          <ScalarProperty Name="id_group" ColumnName="id_group" />
+          <ScalarProperty Name="groups_name" ColumnName="groups_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Loads">
+      <EntityTypeMapping TypeName="Model.Loads">
+        <MappingFragment StoreEntitySet="Loads">
+          <ScalarProperty Name="id_load" ColumnName="id_load" />
+          <ScalarProperty Name="id_teacher" ColumnName="id_teacher" />
+          <ScalarProperty Name="id_group" ColumnName="id_group" />
+          <ScalarProperty Name="id_curriculum_in_the_specialty" ColumnName="id_curriculum_in_the_specialty" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="loud_hours" ColumnName="loud_hours" />
+          <ScalarProperty Name="id_type_of_clock" ColumnName="id_type_of_clock" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="Model.Roles">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="id_role" ColumnName="id_role" />
+          <ScalarProperty Name="rloe_name" ColumnName="rloe_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Specialtys">
+      <EntityTypeMapping TypeName="Model.Specialtys">
+        <MappingFragment StoreEntitySet="Specialtys">
+          <ScalarProperty Name="id_specialty" ColumnName="id_specialty" />
+          <ScalarProperty Name="specialty_name" ColumnName="specialty_name" />
+          <ScalarProperty Name="specialty_code" ColumnName="specialty_code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sudjects">
+      <EntityTypeMapping TypeName="Model.Sudjects">
+        <MappingFragment StoreEntitySet="Sudjects">
+          <ScalarProperty Name="id_sudject" ColumnName="id_sudject" />
+          <ScalarProperty Name="sudject_code" ColumnName="sudject_code" />
+          <ScalarProperty Name="sudject_name" ColumnName="sudject_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Teachers">
+      <EntityTypeMapping TypeName="Model.Teachers">
+        <MappingFragment StoreEntitySet="Teachers">
+          <ScalarProperty Name="id_teacher" ColumnName="id_teacher" />
+          <ScalarProperty Name="teacher_fname" ColumnName="teacher_fname" />
+          <ScalarProperty Name="teacher_name" ColumnName="teacher_name" />
+          <ScalarProperty Name="teacher_patronomic" ColumnName="teacher_patronomic" />
+          <ScalarProperty Name="teacher_photo" ColumnName="teacher_photo" />
+          <ScalarProperty Name="id_user" ColumnName="id_user" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Type_of_clocks">
+      <EntityTypeMapping TypeName="Model.Type_of_clocks">
+        <MappingFragment StoreEntitySet="Type_of_clocks">
+          <ScalarProperty Name="id_type_of_clock" ColumnName="id_type_of_clock" />
+          <ScalarProperty Name="type_of_clock_name" ColumnName="type_of_clock_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="Model.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="id_user" ColumnName="id_user" />
+          <ScalarProperty Name="user_login" ColumnName="user_login" />
+          <ScalarProperty Name="user_password" ColumnName="user_password" />
+          <ScalarProperty Name="id_role" ColumnName="id_role" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
